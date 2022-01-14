@@ -16,6 +16,8 @@ object scalaPractise {
 
     var empDF = empFile.toDF("ename","grade","sal","sex","edeptno")
     val deptDF = deptFile.toDF("ddeptno","depname")
+	
+	empDF.show(false)
 
     empDF.createOrReplaceTempView("empview")
     deptDF.createOrReplaceTempView("deptview")
